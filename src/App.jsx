@@ -20,11 +20,11 @@ function App() {
 
   useEffect(() => {
     // Ensure admin exists on load
-    ensureAdminExists(
-      "gunduzpolat35@gmail.com",
-      "124356pgdG!",
-      "Pargusz"
-    );
+    // ensureAdminExists(
+    //   "gunduzpolat35@gmail.com",
+    //   "124356pgdG!",
+    //   "Pargusz"
+    // );
 
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       if (currentUser) {

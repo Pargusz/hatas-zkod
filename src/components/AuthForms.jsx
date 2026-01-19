@@ -29,7 +29,7 @@ const AuthForms = ({ mode }) => {
             setError(err.message === 'Firebase: Error (auth/user-not-found).' ? 'Kullanıcı bulunamadı.' :
                 err.message === 'Firebase: Error (auth/wrong-password).' ? 'Hatalı şifre.' :
                     err.message === 'Firebase: Error (auth/email-already-in-use).' ? 'Bu e-posta zaten kullanımda.' :
-                        'Bir hata oluştu. Lütfen tekrar deneyin.');
+                        `Hata: ${err.code || err.message}`);
         } finally {
             setLoading(false);
         }
